@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors           = ['n5ken', 'Slava Kravchenko']
   s.homepage          = "https://github.com/cordawyn/refinerycms-members2"
 
-  s.files         = `git ls-files`.split($\)
+  s.files         = `git ls-files`.split($\) - %w(Gemfile.lock)
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = %w(lib)
 
