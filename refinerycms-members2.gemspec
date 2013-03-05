@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
-  s.name              = 'refinerycms-members'
-  s.version           = '0.2.1'
+  s.name              = 'refinerycms-members2'
+  s.version           = '0.3.0'
   s.summary           = 'Members engine for Refinery CMS'
   s.description       = 'Ruby on Rails Members engine for Refinery CMS 2.0'
   s.authors           = ['n5ken', 'Slava Kravchenko']
-  s.homepage          = "https://github.com/cordawyn/refinerycms-member"
+  s.homepage          = "https://github.com/cordawyn/refinerycms-members2"
 
   s.files         = `git ls-files`.split($\)
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
