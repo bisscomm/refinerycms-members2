@@ -37,6 +37,8 @@ You might have noticed that a second migration adds "need_login" boolean field t
 Setting this flag will require all visitors of that page to have a member account.
 Otherwise, 404 error page is returned. This filtering is handled in `lib/refinery/members/instance_methods.rb`.
 You may want to check with that implementation should you decide to override it.
+The gotcha is: this flag is not accessible out-of-the-box, you will need to edit/override your page editing
+template(s) and add it yourself.
 
 Another gotcha is: "need_login" flag does not work for the root page of CMS (which is handled by
 a dedicated "home" action in Refinery::PagesController). The idea is to give a chance to an unsuspecting visitor
