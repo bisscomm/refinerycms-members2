@@ -31,6 +31,18 @@ Finally migrate your database and you're done.
 
     rake db:migrate
 
+## Secrets and Easter Eggs
+
+You might have noticed that a second migration adds "need_login" boolean field to the Refinery CMS pages.
+Setting this flag will require all visitors of that page to have a member account.
+Otherwise, 404 error page is returned. This filtering is handled in `lib/refinery/members/instance_methods.rb`.
+You may want to check with that implementation should you decide to override it.
+
+Another gotcha is: "need_login" flag does not work for the root page of CMS (which is handled by
+a dedicated "home" action in Refinery::PagesController). The idea is to give a chance to an unsuspecting visitor
+to understand what this site is about by providing at least a root page with some info, instead of
+instantly redirecting them to the login page. If you don't want it, override it.
+
 ## Testing
 
 This section is intended for developers of refinerycms-members2.
